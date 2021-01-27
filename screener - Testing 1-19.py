@@ -212,7 +212,7 @@ def bar_chart_stock_scrape():
 
     return fin_list_2
 
-'''def unusual_volume():
+def unusual_volume():
 
     time.sleep(5)
     driver.get("https://sampom100.github.io/UnusualVolumeDetector_Dynamic/")
@@ -237,11 +237,11 @@ def bar_chart_stock_scrape():
         #print(ticker)
         ticker_list_8.append(ticker)
 
-    return ticker_list_8'''
+    return ticker_list_8
 
 
 
-#unusual_ticker_list = unusual_volume()
+unusual_ticker_list = unusual_volume()
 unbiased_ticker_list = unbiased_stock_scrape()
 bar_chart_ticker_list = bar_chart_stock_scrape()
 
@@ -258,7 +258,7 @@ fin_list_comb = set(unbiased_ticker_list) & set(bar_chart_ticker_list)
 
 print(unbiased_ticker_list)
 print(bar_chart_ticker_list)
-#print(unusual_ticker_list)
+print(unusual_ticker_list)
 
 #print(fin_list_comb)
 #print(soup.prettify())

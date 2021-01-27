@@ -26,7 +26,7 @@ time.sleep(1)
 
 # RS_Rating 
 
-stock = 'BB'
+stock = 'DHI'
 
 index = []
 start_date = datetime.datetime.now() - datetime.timedelta(days=60)
@@ -37,6 +37,8 @@ df = pdr.get_data_yahoo(stock, start=start_date, end=end_date, interval = "2m")
 df.index = df.index.tz_localize(None)
 
 E_M_A = EMA(df['Close'], timeperiod=30)
+
+#each period is 2 min
 
 slowk, slowd = STOCH(df['High'], df['Low'], df['Close'], fastk_period=5, slowk_period=3, slowk_matype=0, slowd_period=3, slowd_matype=0)
 
